@@ -10,8 +10,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@main
+        uses: actions/checkout@v2
       - name: Setup
         uses: actions/setup-dotnet@v1
       - name: Pack
         run: dotnet build --configuration Release
+      - name: Push
+        run: dotnet nuget push .\src\TestAction\bin\Release\*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NuGetAPIKey }} --skip-duplicate --no-symbols 1
