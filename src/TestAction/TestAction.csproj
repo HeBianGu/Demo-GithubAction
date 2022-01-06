@@ -4,6 +4,7 @@
 	  <TargetFrameworks>net45;net461;</TargetFrameworks>
 	  <UseWPF>true</UseWPF>
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <Version>1.0.1</Version>
   </PropertyGroup>
 
 </Project>
